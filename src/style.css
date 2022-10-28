@@ -13,5 +13,9 @@
     @apply font-body p-4 bg-purple-700 border-solid rounded-lg cursor-pointer border-purple-700
     hover:bg-purple-900 hover:border-purple-900 text-white
       }
+ 
+      .bd{
+        @apply bg-[#241f31]
+      }
 
       
