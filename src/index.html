@@ -18,26 +18,31 @@
       </div>
     </header>
     <main>
-      <aside class="hidden" id="overlay">
-        <h2>Choose Your Name</h2>
-        <form>
-          <div>
-            <label for="player-name">Player Name</label>
-            <input type="text" name="username" id="player-name" />
-          </div>
-          <div>
-            <button
-              class="font-body p-4 border-solid rounded-sm cursor-pointer border-gray-400 bg-gray-400 hover:bg-purple-400 hover:border-purple-400"
-              type="submit"
-            >
-              Cancel
-            </button>
-            <button class="btn" type="submit">Confirm</button>
-          </div>
-        </form>
-      </aside>
+      <div class="hidden" id="overlay">
+        <aside class="card">
+          <h2 class="text-center font-extrabold text-2xl">Choose Your Name</h2>
+          <form>
+            <div class="text-center">
+              <label for="player-name" class="block font-semibold text-lg"
+                >Player Name-</label
+              >
+              <input type="text" name="username" id="player-name" class="" />
+            </div>
+            <div class="flex justify-around p-4">
+              <button
+                class="font-body p-4 border-solid rounded-md cursor-pointer border-gray-400 bg-gray-400 hover:bg-purple-400 hover:border-purple-400"
+                id="overlay-cancel"
+                onclick="handleClick3"
+              >
+                Cancel
+              </button>
+              <button class="btn">Confirm</button>
+            </div>
+          </form>
+        </aside>
+      </div>
       <section>
-        <div class="flex justify-center p-20 gap-10">
+        <div class="flex justify-center pt-20 pr-20 pl-20 gap-10">
           <div class="card">
             <h1 class="font-bold text-black text-center text-lg p-6">
               Player 1
@@ -49,7 +54,11 @@
               Player Name
             </p>
             <p class="text-center text-black text-3xl font-bold p-2">X</p>
-            <button class="btn" type="submit">Edit</button>
+            <div class="flex justify-center">
+              <button class="btn" id="edit-1" onclick="handleClick1">
+                Edit
+              </button>
+            </div>
           </div>
           <div class="card">
             <h1 class="font-bold text-black text-center text-lg p-6">
@@ -62,22 +71,39 @@
               Player Name
             </p>
             <p class="text-center text-black text-3xl font-bold p-2">O</p>
-            <button class="btn">Edit</button>
+            <div class="flex justify-center">
+              <button class="btn" id="edit-2">Edit</button>
+            </div>
           </div>
         </div>
-        <div>
-          <button class="btn">Start New Game</button>
+        <div class="flex justify-center p-6">
+          <button class="btn" id="start-game" onclick="handleClick4">
+            Start New Game
+          </button>
         </div>
       </section>
-      <section id="active-game">
+      <section id="active-game" class="hidden">
         <div>
-          <h3>
-            You Won,
-            <span id="winner-name">Player Name</span>
-          </h3>
-          <p>Click "Start New Game" above,to start a new game!</p>
+          <div class="flex justify-center">
+            <div
+              class="text-center p-10 bg-purple-700 text-white font-bold rounded-lg"
+            >
+              <h3 class="p-2 text-4xl">
+                You Won,
+                <span id="winner-name">Player Name!</span>
+              </h3>
+              <p class="text-sm">
+                Click "Start New Game" above,to start a new game!
+              </p>
+            </div>
+          </div>
         </div>
-        <p>Its Your Turn <span id="active-player-name">Player Name</span>!</p>
+        <p class="text-center text-md p-4">
+          It's Your Turn
+          <span id="active-player-name" class="font-bold text-lg"
+            >Player Name</span
+          >!
+        </p>
         <ol>
           <li></li>
           <li></li>
