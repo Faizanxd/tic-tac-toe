@@ -5,7 +5,14 @@ module.exports = {
     extend: {
       fontFamily:{
         body:['Nunito']
+       
       },
+      gridTemplateColumns:{
+        '3': 'repeat(3,6rem)'
+    },
+    gridTemplateRows:{
+      '3': 'repeat(3,6rem);'
+  },
     },
   },
   plugins: [],

@@ -88,8 +88,8 @@
           </div>
         </section>
 
-        <section id="active-game" class="hidden">
-          <div>
+        <section id="active-game">
+          <div id="game-over" class="hidden">
             <div class="flex justify-center">
               <div
                 class="text-center p-10 bg-purple-700 text-white font-bold rounded-lg"
@@ -104,25 +104,30 @@
               </div>
             </div>
           </div>
-          <p class="text-center text-md p-4">
-            It's Your Turn
-            <span id="active-player-name" class="font-bold text-lg"
-              >Player Name</span
-            >!
-          </p>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
+          <div id="game-board">
+            <p class="text-center text-md p-4">
+              It's Your Turn
+              <span id="active-player-name" class="font-bold text-lg"
+                >Player Name</span
+              >!
+            </p>
+             <ol
+                class="font-bold grid grid-cols-3 grid-rows-3 justify-items-center place-content-center p-6 gap-20"
+              >
+                <li class="board" >x</li>
+                <li class="board">x</li>
+                <li class="board">x</li>
 
-            <li></li>
-            <li></li>
-            <li></li>
+                <li class="board">x</li>
+                <li class="board">x</li>
+                <li class="board">x</li>
 
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+                <li class="board">x</li>
+                <li class="board">x</li>
+                <li class="board">x</li>
+              
+            </div>
+          </div>
         </section>
       </main>
       <script type="module" src="/main.js"></script>
